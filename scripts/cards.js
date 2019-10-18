@@ -12,14 +12,12 @@ let cardObject = {
     deleteButton: document.querySelector(`#delete--${cardNumber}`),
     card: document.querySelector(`#card--${cardNumber}`),
     cardRemover: function () {
-       container.removeChild(this.card)
+        container.removeChild(this.card)
 
     }
 }
-console.log(cardObject.deleteButton)
 
 
-console.log(cardNumber)
 document.querySelector("#create").addEventListener("click", cardObject.cardCreator)
 
 
@@ -30,6 +28,4 @@ document.querySelector("#delete--6").addEventListener("click", function test() {
     console.log("test")
 })
 
-
-
-document.querySelector(`${cardObject.deleteButton}`).addEventListener("click", cardObject.cardRemover)
+cardObject.deleteButton.addEventListener("click", cardObject.cardRemover)
